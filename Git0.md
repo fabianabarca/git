@@ -47,16 +47,8 @@ Por el sistema de ramificaciones descrito, la forma en que fluye el código y se
 
 Todos los desarrolladores aportan al repositorio directamente.
 
-```mermaid
-graph TD
-R[Repositorio]
-D1[Desarrollador]
-D2[Desarrollador]
-D3[Desarrollador]
-R --- D1
-R -- bidireccional --- D2
-R --- D3
-```
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
 ##### Modelo del "dictador"
 
 Una sola persona (o grupo pequeño) autoriza los cambios que ingresan al repositorio "bendecido".
