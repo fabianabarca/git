@@ -47,34 +47,13 @@ Por el sistema de ramificaciones descrito, la forma en que fluye el código y se
 
 Todos los desarrolladores aportan al repositorio directamente.
 
-![alt text](Git0_colaborativo.svg "Logo Title Text 1")
+![alt text](Git0_colaborativo.svg "Modelo colaborativo")
 
 ##### Modelo del "dictador"
 
 Una sola persona (o grupo pequeño) autoriza los cambios que ingresan al repositorio "bendecido".
 
-```mermaid
-graph LR
-D[Dictador]
-T1[Teniente] 
-T2[Teniente]
-D1[Desarrollador]
-D2[Desarrollador]
-D3[Desarrollador]
-D4[Desarrollador]
-R[Repositorio bendecido]
-D --> R
-R --> D1
-R --> D2
-R --> D3
-R --> D4
-D1 --> T1
-D2 --> T1
-D3 --> T2
-D4 --> T2
-T1 --> D
-T2 --> D
-```
+![alt text](Git0_dictador.svg "Modelo del dictador")
 
 ### d) Seguridad de los datos
 
@@ -115,15 +94,7 @@ git init
 
 Luego de eso, Git define "lugares" o ubicaciones en donde se mueven los archivos, a saber:
 
-```mermaid
-graph TD
-A[Directorio de trabajo]
-B[Área de ensayos] 
-C[Repositorio]
-A-- git add --> B
-B -- git reset --> A
-B -- git commit --> C
-```
+![alt text](Git0_ubicaciones.svg "Ubicaciones en Git")
 
 ### *Working directory* (directorio de trabajo)
 
@@ -161,14 +132,7 @@ Hay cuatro estados posibles para el archivo en Git:
 
 Ciertas acciones de Git trasladan al archivo entre un estado y otro:
 
-```mermaid
-sequenceDiagram
-no rastreado ->> en ensayos: al agregar archivo (add)
-sin modificaciones ->> con modificaciones: al editar archivo
-con modificaciones ->> en ensayos: al poner en ensayos (add)
-sin modificaciones ->> no rastreado: al remover el archivo (reset)
-en ensayos ->> sin modificaciones: al consignar (commit)
-```
+![alt text](Git0_estados.svg "Estados de Git")
 
 ##  Primero lo primero
 
