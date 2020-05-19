@@ -119,16 +119,16 @@ Es el lugar donde se encuentran los archivos con los cambios realizados y consol
 Hay cuatro estados posibles para el archivo en Git:
 
 *Untracked* (no rastreado)
-: sfasdfasd
+: Si el archivo se edita y se guarda no queda registro de las versiones.
 
 *Unmodified* (sin modificaciones)
-: asdfasdf
+: El archivo está monitoreado pero no tiene cambios (ejemplo: no hay `Ctrl` + `S`).
 
 *Modified* (con modificaciones)
-: asdf
+: Git detecta cambios en el documento.
 
 *Staged* (en ensayos)
-: asdfas
+: Uno o varios archivos están listos para ser consignados al repositorio.
 
 Ciertas acciones de Git trasladan al archivo entre un estado y otro:
 
