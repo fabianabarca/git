@@ -213,14 +213,7 @@ Los siguientes son comandos esenciales que se aplican sobre el directorio actual
 15. Si ahora nuevamente guardamos los cambios en el repositorio con `$ git commit -m "Nuevo mensaje por el segundo commit."`, veremos algo como *"1 file changed, 2 insertions(+), 2 deletions(-)"*
 16. Es posible "tomar un atajo" desde el directorio al repositorio con `git commit -a`.
 
-```mermaid
-sequenceDiagram
-directorio ->> área de ensayos: git add
-área de ensayos ->> repositorio: git commit
-directorio ->> área de ensayos: git add
-área de ensayos ->> repositorio: git commit
-directorio ->> repositorio: git commit -a
-```
+![alt text](Git0_repositorio_local.svg "Repositorio local")
 
 #### Resumen de comandos nuevos utilizados
 
@@ -235,21 +228,7 @@ directorio ->> repositorio: git commit -a
 
 Parte de la utilidad de Git es poder interactuar en la edición de software con personas en distintos lugares. Para eso está la web. Ahora el flujo de trabajo puede ser como el siguiente:
 
-```mermaid
-graph TD
-RR[Repositorio remoto]
-DL[Directorio local]
-PE(Programa de edición)
-AE[Área de ensayos]
-RL[Repositorio local]
-RR -- git clone --> DL
-AE --> PE
-PE --> AE
-DL -- git add --> AE
-AE -- git commit --> RL
-RL -- git push --> RR
-RR -- git pull --> RL
-```
+![alt text](Git0_remoto.svg "Desde un repositorio remoto")
 
 Hay varios motivos por los que nos puede interesar copiar ("**clonar**") los archivos de un repositorio remoto (*"repo"*, en el lingo):
 
@@ -310,16 +289,7 @@ Ahora es posible ejecutar Jupyter con los archivos ahí presentes para asuntos r
 
 Sea R: *remoto* y L: *local*:
 
-```mermaid
-sequenceDiagram
-master R ->> master L: git clone
-master L ->> staging area L: git add
-loop Cambios
-	staging area L ->> master L: git commit
-end
-master R ->> master L: git pull
-master L ->> master R: git push
-```
+![alt text](Git0_repositorio_remoto.svg "Repositorio remoto")
 
 ### Chiste
 
@@ -349,21 +319,7 @@ Hacer modificaciones en una ramificación es una de las ventajas citadas de Git:
 
 Si R: *remoto* y L: *local*, el siguiente diagrama nos ayuda a visualizar la secuencia de cambios realizados.
 
-```mermaid
-sequenceDiagram
-master R ->> master L: git clone
-master L ->> branch L: git branch
-master L ->> branch L: git checkout
-branch L ->> staging area L: git add
-loop Cambios
-	staging area L ->> branch L: git commit
-end
-branch L ->> branch R: git push
-branch L ->> master L: git checkout
-master R ->> master L: git pull
-branch L ->> master L: git merge
-branch R ->> master R: git merge
-```
+![alt text](Git0_rama.svg "Ramificación")
 
 ## Para explorar más
 
