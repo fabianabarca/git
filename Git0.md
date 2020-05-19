@@ -133,19 +133,19 @@ B -- git reset --> A
 B -- git commit --> C
 ```
 
-### *Working directory*[^1] (directorio de trabajo)
+### *Working directory* (directorio de trabajo)
 
 > Cambios no monitoreados
 
 Es el directorio local donde el usuario tiene almacenados los archivos ligados al proyecto.
 
-### *Staging area*[^2] o *index* (área de ensayos)
+### *Staging area* o *index* (área de ensayos)
 
 > Cambios monitoreados pero no enviados al repositorio
 
 Es donde el usuario va a agregar los archivos que modifica para luego guardarlos en el repositorio. Los cambios que aquí suceden "dejan rastro" en Git, esto a diferencia de cambios en archivos comunes, que solamente guardan la última versión.
 
-### *Repository*[^3] (repositorio)
+### *Repository* (repositorio)
 
 > Versión estable
 
@@ -430,11 +430,12 @@ La lista completa está en [https://git-scm.com/docs](https://git-scm.com/docs).
 * "Git y Github | Curso Práctico de Git y Github Desde Cero" es un tutorial en video por Fazt en [YouTube](https://youtu.be/HiXLkL42tMU)
 * "Git Tutorial for Beginners: Command-Line Fundamentals" es un tutorial en video por Corey Schafer en [YouTube](https://youtu.be/HVsySz-h9r4)
 
+### Notas sobre la pronunciación
+
+* *"Working directory"*: | ˈwərkiNG diˈrektərē |
+* *"Staging area"*: | ˈstājiNG ˈerēə |
+* *"Repository"*: | rəˈpäzəˌtôrē |
 
 ## Sobre este documento
 
 2020 - Fabián Abarca Calderón, editado en [StackEdit](https://stackedit.io/)
-
-[^1]: *"Working directory"*: | ˈwərkiNG diˈrektərē |
-[^2]: *"Staging area"*: | ˈstājiNG ˈerēə |
-[^3]: *"Repository"*: | rəˈpäzəˌtôrē |
