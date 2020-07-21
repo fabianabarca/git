@@ -47,42 +47,13 @@ Por el sistema de ramificaciones descrito, la forma en que fluye el código y se
 
 Todos los desarrolladores aportan al repositorio directamente.
 
-```mermaid
-graph TD
-R[Repositorio]
-D1[Desarrollador]
-D2[Desarrollador]
-D3[Desarrollador]
-R --- D1
-R -- bidireccional --- D2
-R --- D3
-```
+![](Git0_colaborativo.svg)
+
 ##### Modelo del "dictador"
 
 Una sola persona (o grupo pequeño) autoriza los cambios que ingresan al repositorio "bendecido".
 
-```mermaid
-graph LR
-D[Dictador]
-T1[Teniente] 
-T2[Teniente]
-D1[Desarrollador]
-D2[Desarrollador]
-D3[Desarrollador]
-D4[Desarrollador]
-R[Repositorio bendecido]
-D --> R
-R --> D1
-R --> D2
-R --> D3
-R --> D4
-D1 --> T1
-D2 --> T1
-D3 --> T2
-D4 --> T2
-T1 --> D
-T2 --> D
-```
+![](Git0_dictador.svg)
 
 ### d) Seguridad de los datos
 
@@ -123,15 +94,7 @@ git init
 
 Luego de eso, Git define "lugares" o ubicaciones en donde se mueven los archivos, a saber:
 
-```mermaid
-graph TD
-A[Directorio de trabajo]
-B[Área de ensayos] 
-C[Repositorio]
-A-- git add --> B
-B -- git reset --> A
-B -- git commit --> C
-```
+![](Git0_ubicaciones.svg)
 
 ### *Working directory* (directorio de trabajo)
 
@@ -169,14 +132,7 @@ Hay cuatro estados posibles para el archivo en Git:
 
 Ciertas acciones de Git trasladan al archivo entre un estado y otro:
 
-```mermaid
-sequenceDiagram
-no rastreado ->> en ensayos: al agregar archivo (add)
-sin modificaciones ->> con modificaciones: al editar archivo
-con modificaciones ->> en ensayos: al poner en ensayos (add)
-sin modificaciones ->> no rastreado: al remover el archivo (reset)
-en ensayos ->> sin modificaciones: al consignar (commit)
-```
+![](Git0_estado.svg)
 
 ##  Primero lo primero
 
@@ -257,14 +213,7 @@ Los siguientes son comandos esenciales que se aplican sobre el directorio actual
 15. Si ahora nuevamente guardamos los cambios en el repositorio con `$ git commit -m "Nuevo mensaje por el segundo commit."`, veremos algo como *"1 file changed, 2 insertions(+), 2 deletions(-)"*
 16. Es posible "tomar un atajo" desde el directorio al repositorio con `git commit -a`.
 
-```mermaid
-sequenceDiagram
-directorio ->> área de ensayos: git add
-área de ensayos ->> repositorio: git commit
-directorio ->> área de ensayos: git add
-área de ensayos ->> repositorio: git commit
-directorio ->> repositorio: git commit -a
-```
+![](Git0_repositorio_local.svg)
 
 #### Resumen de comandos nuevos utilizados
 
@@ -279,21 +228,7 @@ directorio ->> repositorio: git commit -a
 
 Parte de la utilidad de Git es poder interactuar en la edición de software con personas en distintos lugares. Para eso está la web. Ahora el flujo de trabajo puede ser como el siguiente:
 
-```mermaid
-graph TD
-RR[Repositorio remoto]
-DL[Directorio local]
-PE(Programa de edición)
-AE[Área de ensayos]
-RL[Repositorio local]
-RR -- git clone --> DL
-AE --> PE
-PE --> AE
-DL -- git add --> AE
-AE -- git commit --> RL
-RL -- git push --> RR
-RR -- git pull --> RL
-```
+![](Git0_repositorio_remoto.svg)
 
 Hay varios motivos por los que nos puede interesar copiar ("**clonar**") los archivos de un repositorio remoto (*"repo"*, en el lingo):
 
@@ -354,16 +289,7 @@ Ahora es posible ejecutar Jupyter con los archivos ahí presentes para asuntos r
 
 Sea R: *remoto* y L: *local*:
 
-```mermaid
-sequenceDiagram
-master R ->> master L: git clone
-master L ->> staging area L: git add
-loop Cambios
-	staging area L ->> master L: git commit
-end
-master R ->> master L: git pull
-master L ->> master R: git push
-```
+![](Git0_repositorio_remoto.svg)
 
 ### Chiste
 
