@@ -319,21 +319,7 @@ Hacer modificaciones en una ramificación es una de las ventajas citadas de Git:
 
 Si R: *remoto* y L: *local*, el siguiente diagrama nos ayuda a visualizar la secuencia de cambios realizados.
 
-```mermaid
-sequenceDiagram
-master R ->> master L: git clone
-master L ->> branch L: git branch
-master L ->> branch L: git checkout
-branch L ->> staging area L: git add
-loop Cambios
-	staging area L ->> branch L: git commit
-end
-branch L ->> branch R: git push
-branch L ->> master L: git checkout
-master R ->> master L: git pull
-branch L ->> master L: git merge
-branch R ->> master R: git merge
-```
+![](Git0_remoto.svg)
 
 ## Para explorar más
 
