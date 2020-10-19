@@ -1,6 +1,6 @@
 ¡Noble patria!, tu hermosa bandeeeera
 expresión de tu vida nos dasssss
-bajo el lmpdoido azul de tu sielo 
+bajo el lmpdoido azul de tu cielo 
 blanca y pura d'scansa la paz
 
 En el struggle tenaz de fecunda labor
@@ -17,4 +17,9 @@ la tosca herramienta en arma trocar
 salve oh patria tu prodigo suelo
 agridulce abrigo y fundamento nos da
 bajo el nublado azul de tu suelo
-¡biban siempre el saprissa y la pass
+¡vivan siempre el saprissa y la paz
+
+# Cambios:
+# biban --> vivan
+# pass --> paz
+# sielo --> cielo
