@@ -29,7 +29,7 @@ Git está basado en un modelo de "ramificación", en el cual se pueden hacer *br
 * Una rama de prueba de prototipos o ideas
 * Una rama de ensayo de nuevas características
 
-Todas estas ramificaciones pueden luego fusionarse con la principal (conocida como *master branch* o "rama maestra") o desecharse. Se pueden hacer tantas ramificaciones como se desee (y ramificaciones de ramificaciones) y se puede fusionar luego una, algunas o todas ellas.
+Todas estas ramificaciones pueden luego fusionarse con la principal (conocida como *main branch* o "rama principal") o desecharse. Se pueden hacer tantas ramificaciones como se desee (y ramificaciones de ramificaciones) y se puede fusionar luego una, algunas o todas ellas.
 
 ### b) Área de ensayos
 
@@ -74,7 +74,6 @@ Windows
 
 Una vez instalado, en la misma terminal se puede probar que funciona correctamente ejecutando algunas de las siguientes instrucciones:
 
-
 `$ git`
 : muestra una descripción de las opciones que tiene
 
@@ -94,8 +93,6 @@ git init
 
 Luego de eso, Git define "lugares" o ubicaciones en donde se mueven los archivos, a saber:
 
-![](Git0_ubicaciones.svg)
-
 ### *Working directory* (directorio de trabajo)
 
 > Cambios no monitoreados
@@ -114,21 +111,18 @@ Es donde el usuario va a agregar los archivos que modifica para luego guardarlos
 
 Es el lugar donde se encuentran los archivos con los cambios realizados y consolidados por todos los desarrolladores participantes en las diferentes ramas. Puede ser local o remoto (ver sección *Servidores remotos de Git*).
 
+### Migración entre un lugar y otro
+
+![](Git0_ubicaciones.svg)
+
 ## Estado de los archivos
 
 Hay cuatro estados posibles para el archivo en Git:
 
-*Untracked* (no rastreado)
-: sfasdfasd
-
-*Unmodified* (sin modificaciones)
-: asdfasdf
-
-*Modified* (con modificaciones)
-: asdf
-
-*Staged* (en ensayos)
-: asdfas
+- *Untracked* (no rastreado)
+- *Unmodified* (sin modificaciones)
+- *Modified* (con modificaciones)
+- *Staged* (en ensayos)
 
 Ciertas acciones de Git trasladan al archivo entre un estado y otro:
 
@@ -302,7 +296,7 @@ Ja, ja.
 
 ## *Ejemplo 4*: trabajo colaborativo haciendo *fork* y *pull request* en el *master branch*
 
-Perdonando el *spanglish* del título, es usual colaborar con otros usuarios de GitHub cuando se hace desde un servicio web de Git (como GitHub…) esto también se conoce como "hacer un *fork*", que es una *copia en el lado del servidor*, desde la cuenta del dueño del repositorio a la cuenta de la persona que hace *fork*, y es monitoreado por el servicio web en cuestión (*fork* **no es un comando de Git**).
+Perdonando el *spanglish* del título, es usual colaborar con otros usuarios de GitHub cuando se hace desde un servicio web de Git (como GitHub) esto también se conoce como "hacer un *fork*", que es una *copia en el lado del servidor*, desde la cuenta del dueño del repositorio a la cuenta de la persona que hace *fork*, y es monitoreado por el servicio web en cuestión (*fork* **no es un comando de Git** sino de GitHub).
 
 ### Hacer un *fork* (bifurcación)
 
