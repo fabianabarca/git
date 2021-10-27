@@ -8,4 +8,4 @@ El documento `Git.md` es un breve tutorial sobre Git.
 
 ## Himnovaciones
 
-En el documento de texto `himnovaciones.txt` hay un texto conocido para la mayoría, y tiene algunos errores. Es necesario participar con al menos un *pull request* para corregir entre todos el texto y dejarlo perfecto.
+En el documento de texto `himnovaciones.txt` hay un texto conocido para la mayoría, y tiene algunos errores. Es necesario participar con **un** *pull request* para corregir entre todos el texto y dejarlo perfecto.
