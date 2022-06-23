@@ -1,4 +1,6 @@
-# `git0` - Introducción a git
+# `git0` - Introducción a git 
+
+#git config 
 
 Un repositorio de práctica para aprender los aspectos esenciales del sistema de control de versiones Git en el curso IE0405 - Modelos Probabilísticos de Señales y Sistemas.
 
